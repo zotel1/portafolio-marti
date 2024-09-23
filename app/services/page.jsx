@@ -1,7 +1,7 @@
 const Services = () => {
-    return <div>
+    return (<div>
         Services page
-    </div>
+    </div>)
 };
 
 export default Services;
