@@ -1,3 +1,5 @@
+"use client";
+
 import { animate, motion } from "framer-motion";
 
 // variants
@@ -30,7 +32,7 @@ const Stairs = () => {
     */}
     {[...Array(6)].map((_, index) => {
         return (
-        <motion.div 
+        <motion.div
         key={index} 
         variants={stairAnimation} 
         initial="initial"
@@ -38,7 +40,9 @@ const Stairs = () => {
         exit="exit"
         transition={{
             duration: 0.4,
-            ease: reverseIndex(index) * 0.1,
+           // ease: reverseIndex(index) * 0.1,
+            ease: "easeInOut", // Utiliza una curva reconocida
+            delay: reverseIndex(index) * 0.1, // Puedes seguir usando delay para el stagger
         }}
         className='h-full w-full bg-white relative'
          />
