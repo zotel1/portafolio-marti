@@ -40,7 +40,7 @@ const Stairs = () => {
         exit="exit"
         transition={{
             duration: 0.4,
-           // ease: reverseIndex(index) * 0.1,
+           
             ease: "easeInOut", // Utiliza una curva reconocida
             delay: reverseIndex(index) * 0.1, // Puedes seguir usando delay para el stagger
         }}
